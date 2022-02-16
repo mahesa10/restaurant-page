@@ -1,4 +1,5 @@
-import homeElement from './home.js'
+import displayHome from './home.js';
+import displayMenu from './menu.js';
 
 const headerElement = () => {
   const header = document.createElement("header");
@@ -6,12 +7,21 @@ const headerElement = () => {
   const ul = document.createElement("ul");
   
   const homeNav = document.createElement("li");
+  homeNav.setAttribute("id", "nav-home");
   homeNav.textContent = "Home";
+  homeNav.addEventListener("click", () => {
+    displayHome();
+  })
 
   const menuNav = document.createElement("li");
+  menuNav.setAttribute("id", "nav-menu");
   menuNav.textContent = "Menu";
+  menuNav.addEventListener("click", () => {
+    displayMenu();
+  })
 
   const contactNav = document.createElement("li");
+  contactNav.setAttribute("id", "nav-contact");
   contactNav.textContent = "Contact";
 
   ul.appendChild(homeNav);
@@ -25,9 +35,8 @@ const headerElement = () => {
   return header;
 }
 
-const mainElement = () => {
+const mainElement = (content) => {
   const main = document.createElement("main");
-  main.appendChild(homeElement());
   return main;
 }
 
@@ -47,6 +56,8 @@ const displayWebsite = () => {
   content.appendChild(headerElement());
   content.appendChild(mainElement());
   content.appendChild(footerElement());
+
+  displayHome();
 }
 
-export default displayWebsite;
+export { displayWebsite };

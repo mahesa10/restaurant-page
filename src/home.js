@@ -18,4 +18,10 @@ const homeElement = () => {
   return home;
 }
 
-export default homeElement;
+const displayHome = () => {
+  const main = document.querySelector("main");
+  main.textContent = "";
+  main.appendChild(homeElement());
+}
+
+export default displayHome;

@@ -1,3 +1,3 @@
-import displayWebsite from './website.js';
+import { displayWebsite } from './website.js';
 
 displayWebsite();
