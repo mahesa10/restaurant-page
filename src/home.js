@@ -1,4 +1,4 @@
-const homeElement = () => {
+const homePage = () => {
   const home = document.createElement("div");
   home.setAttribute("id", "home");
 
@@ -21,7 +21,7 @@ const homeElement = () => {
 const displayHome = () => {
   const main = document.querySelector("main");
   main.textContent = "";
-  main.appendChild(homeElement());
+  main.appendChild(homePage());
 }
 
 export default displayHome;

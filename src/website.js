@@ -1,5 +1,6 @@
 import displayHome from './home.js';
 import displayMenu from './menu.js';
+import displayContact from './contact.js';
 
 const headerElement = () => {
   const header = document.createElement("header");
@@ -23,6 +24,9 @@ const headerElement = () => {
   const contactNav = document.createElement("li");
   contactNav.setAttribute("id", "nav-contact");
   contactNav.textContent = "Contact";
+  contactNav.addEventListener("click", () => {
+    displayContact();
+  })
 
   ul.appendChild(homeNav);
   ul.appendChild(menuNav);
@@ -35,7 +39,7 @@ const headerElement = () => {
   return header;
 }
 
-const mainElement = (content) => {
+const mainElement = () => {
   const main = document.createElement("main");
   return main;
 }

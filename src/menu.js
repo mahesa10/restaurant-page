@@ -1,4 +1,4 @@
-const menuElement = () => {
+const menuPage = () => {
   const menuContainer = document.createElement("div");
   menuContainer.setAttribute("id", "menu");
 
@@ -56,7 +56,7 @@ const menuElement = () => {
 const displayMenu = () => {
   const main = document.querySelector("main");
   main.textContent = "";
-  main.appendChild(menuElement());
+  main.appendChild(menuPage());
 }
 
 export default displayMenu;
