@@ -10,27 +10,27 @@ const menuPage = () => {
   const menus = [
     {
       name: "Beef Rendang",
-      imageUrl: "./images/rendang.jpg",
+      imageUrl: "./assets/images/rendang.jpg",
     },
     {
       name: "Satay",
-      imageUrl: "./images/satay.jpg",
+      imageUrl: "./assets/images/satay.jpg",
     },
     {
       name: "Fried Rice",
-      imageUrl: "./images/fried-rice.jpg",
+      imageUrl: "./assets/images/fried-rice.jpg",
     },
     {
       name: "Gado-Gado",
-      imageUrl: "./images/gado-gado.jpg",
+      imageUrl: "./assets/images/gado-gado.jpg",
     },
     {
       name: "Soto",
-      imageUrl: "./images/soto.jpg",
+      imageUrl: "./assets/images/soto.jpg",
     },
     {
       name: "Martabak",
-      imageUrl: "./images/martabak.jpeg",
+      imageUrl: "./assets/images/martabak.jpeg",
     }
   ];
   

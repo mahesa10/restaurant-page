@@ -7,11 +7,11 @@ const contactPage = () => {
 
   const contactTel = document.createElement("span");
   contactTel.classList.add("telephone");
-  contactTel.innerHTML = `<img src="./icons/phone.svg"> (999) 999-9999`;
+  contactTel.innerHTML = `<img src="./assets/icons/phone.svg"> (999) 999-9999`;
 
   const contactAddr = document.createElement("span");
   contactAddr.classList.add("address");
-  contactAddr.innerHTML = `<img src="./icons/location.svg"> 99 Nusantara Street`;
+  contactAddr.innerHTML = `<img src="./assets/icons/location.svg"> 99 Nusantara Street`;
 
   const contactInfo = document.createElement("div");
   contactInfo.classList.add("contact-info");
