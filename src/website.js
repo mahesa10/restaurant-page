@@ -2,6 +2,12 @@ import displayHome from './home.js';
 import displayMenu from './menu.js';
 import displayContact from './contact.js';
 
+const setActiveNav = (target) => {
+  const activeNav = document.getElementsByClassName("active");
+  activeNav[0].className = activeNav[0].className.replace("active", "");
+  target.className = "active";
+}
+
 const headerElement = () => {
   const header = document.createElement("header");
   const nav = document.createElement("nav");
@@ -9,22 +15,26 @@ const headerElement = () => {
   
   const homeNav = document.createElement("li");
   homeNav.setAttribute("id", "nav-home");
+  homeNav.classList.add("active")
   homeNav.textContent = "Home";
-  homeNav.addEventListener("click", () => {
+  homeNav.addEventListener("click", (e) => {
+    setActiveNav(e.target);
     displayHome();
   })
 
   const menuNav = document.createElement("li");
   menuNav.setAttribute("id", "nav-menu");
   menuNav.textContent = "Menu";
-  menuNav.addEventListener("click", () => {
+  menuNav.addEventListener("click", (e) => {
+    setActiveNav(e.target);
     displayMenu();
   })
 
   const contactNav = document.createElement("li");
   contactNav.setAttribute("id", "nav-contact");
   contactNav.textContent = "Contact";
-  contactNav.addEventListener("click", () => {
+  contactNav.addEventListener("click", (e) => {
+    setActiveNav(e.target);
     displayContact();
   })
 
@@ -64,4 +74,4 @@ const displayWebsite = () => {
   displayHome();
 }
 
-export { displayWebsite };
+export { displayWebsite, setActiveNav };

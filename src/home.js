@@ -1,3 +1,5 @@
+import displayMenu from "./menu.js";
+
 const homePage = () => {
   const home = document.createElement("div");
   home.setAttribute("id", "home");
@@ -10,6 +12,13 @@ const homePage = () => {
 
   const homeButton = document.createElement("button");
   homeButton.textContent = "Our Menu";
+  homeButton.addEventListener("click", () => {
+    const menuNav = document.getElementById("nav-menu");
+    const activeNav = document.getElementsByClassName("active");
+    activeNav[0].className = activeNav[0].className.replace("active", "");
+    menuNav.className = "active";
+    displayMenu();
+  })
 
   home.appendChild(homeHeader);
   home.appendChild(homeDesc);

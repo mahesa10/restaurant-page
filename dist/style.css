@@ -54,13 +54,15 @@ header ul {
 
 header ul li {
   list-style: none;
-  font-weight: 600;
   font-size: 1.125rem;
   cursor: pointer;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 6px;
 }
 
-header ul li:hover {
-  color: #FD8242;
+header .active,
+header li:hover {
+  border-bottom: 2px solid #FD8242;
 }
 
 main {
@@ -95,21 +97,30 @@ h1, #home p {
   color: #FD8242;
 }
 
-#home button {
+button {
   font-family: inherit;
-  font-size: 1rem;
-  padding: 8px 16px;
-  border-radius: 4px;
-  border: none;
   background-color: #FD8242;
   color: #ffffff;
+  cursor: pointer;
+  font-size: inherit;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+button:hover {
+  background-color: #fd9c68;
+}
+
+button:active {
+  background-color: #fc5a03;
 }
 
 #menu {
   display: grid;
   grid-template-columns: repeat(2, max-content);
   grid-auto-rows: max-content;
-  width: 60%;
+  width: 820px;
   height: max-content;
   margin: 24px auto;
   background-color: rgba(9, 9, 8, .8);
@@ -146,7 +157,7 @@ h1, #home p {
 }
 
 #contact {
-  width: 60%;
+  width: 820px;
   max-height: 100%;
   margin: 24px auto;
   background-color: rgba(9, 9, 8, .8);
@@ -195,13 +206,6 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 form button {
-  background-color: #FD8242;
-  color: #ffffff;
-  border: none;
-  font-family: inherit;
-  font-size: inherit;
-  padding: 8px 16px;
-  border-radius: 8px;
   margin-top: 16px;
 }
 

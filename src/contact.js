@@ -11,7 +11,7 @@ const contactPage = () => {
 
   const contactAddr = document.createElement("span");
   contactAddr.classList.add("address");
-  contactAddr.innerHTML = `<img src="./icons/location.svg"> 99 Nusantara Street, New York`;
+  contactAddr.innerHTML = `<img src="./icons/location.svg"> 99 Nusantara Street`;
 
   const contactInfo = document.createElement("div");
   contactInfo.classList.add("contact-info");
